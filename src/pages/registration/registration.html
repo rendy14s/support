@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar color=primary>
+      
+    <ion-title>Registration :</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary">Name :</ion-label>
+          <ion-input placeholder="              Full Name"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label color="primary" fixed>Address :</ion-label>
+          <ion-input placeholder="   Your Address"></ion-input>
+         </ion-item>
+      
+        <ion-item>
+          <ion-label color="primary" >Email Address :</ion-label>
+          <ion-input type="email" placeholder="Email Address"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label color="primary" >Input Password :</ion-label>
+          <ion-input type="password" placeholder="Write Your Password"></ion-input>
+        </ion-item>
+      </ion-list>
+        <button ion-button color="primary" round (click)="showAlert()" >Save</button>        
+        <button ion-button color="primary" round (click)="dismiss()" >Cancel</button>                
+        
+</ion-content>
