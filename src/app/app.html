@@ -1,12 +1,17 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
 
-  <ion-content>
-    <ion-list>
+  <ion-content class="masters"> 
+  <ion-list>
+
+      <ion-thumbnail id="bg">
+          <div class="foto-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}" menuClose></div>
+
+          <p class="title-menu">VMD Indonesia</p>
+          <p class="title-menu">Consultan IT</p>
+      </ion-thumbnail>
+
+
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>

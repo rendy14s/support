@@ -15,9 +15,12 @@ import { IonicPage, NavController, NavParams, ModalController, ViewController  }
 })
 export class DetailPage {
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-              public viewCtrl: ViewController ) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public viewCtrl: ViewController 
+  ) {
+  
   }
 
   ionViewDidLoad() {
