@@ -48,6 +48,49 @@
         
         </ion-card>
 
-        <button ion-button color="blue" outline>Silahkan Klik</button>
-        <button ion-button color="secondary" clear>Silahkan Klik</button>
-</ion-content>
+        <button ion-button color="blue" outline (click)="presentActionSheet()" >Pencet</button>
+        <button ion-button color="secondary" clear (click)="showAlert()">Tekan</button>
+        <button ion-button color="red" clear (click)="presentLoading()">Tonjok</button>
+
+        
+        <ion-list>
+          
+            <ion-item>
+              <ion-label stacked>Username</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label stacked>Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label stacked>Start Time</ion-label>
+              <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" ></ion-datetime>
+            </ion-item>
+
+          </ion-list>
+
+          <ion-list inset>
+            
+              <ion-item>
+                <ion-label>Username</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password"></ion-input>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Start Time</ion-label>
+                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" ></ion-datetime>
+              </ion-item>
+
+            </ion-list>
+
+            <button ion-button color="red" clear (click)="presentModal()">present modal</button>
+            
+      </ion-content>
