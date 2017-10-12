@@ -17,8 +17,7 @@ export class HomePage {
      public loadingCtrl: LoadingController,
      public modalCtrl: ModalController) {
        this.presentLoading();
-
-  }
+     }
 
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
