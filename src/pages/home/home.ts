@@ -11,36 +11,13 @@ import { ModalController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, 
-    public actionSheetCtrl: ActionSheetController,
-    public alertCtrl: AlertController,
-    public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController) 
-    {
-        this.presentLoading();
-    }
-
-          presentModal() {
-        let modal = this.modalCtrl.create("OrderPage");
-        modal.present();
-      }
-
-  presentLoading() {
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 1000
-    });
-    loader.present();
-  }
-
-  showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-      buttons: ['OK']
-    });
-    alert.present();
-  }
+  constructor(public navCtrl: NavController,
+     public actionSheetCtrl: ActionSheetController,
+     public alertCtrl: AlertController,
+     public loadingCtrl: LoadingController,
+     public modalCtrl: ModalController) {
+       this.presentLoading();
+     }
 
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
@@ -67,5 +44,24 @@ export class HomePage {
       ]
     });
     actionSheet.present();
+  }
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'New Friend!',
+      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
+  }
+  presentModal() {
+    let modal = this.modalCtrl.create("DetailPage");
+    modal.present();
   }
 }
