@@ -4,21 +4,32 @@ import { ActionSheetController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  public role: any;
+  
   constructor(public navCtrl: NavController,
      public actionSheetCtrl: ActionSheetController,
      public alertCtrl: AlertController,
      public loadingCtrl: LoadingController,
-     public modalCtrl: ModalController) {
+     public modalCtrl: ModalController,
+     public toastCtrl: ToastController) {
        this.presentLoading();
      }
 
+     presentToast() {
+      let toast = this.toastCtrl.create({
+        message: 'User was added successfully',
+        duration: 800
+      });
+      toast.present();
+    }
+    
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Modify your album',
@@ -56,7 +67,7 @@ export class HomePage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
-      duration: 3000
+      duration: 800
     });
     loader.present();
   }
