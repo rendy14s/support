@@ -7,84 +7,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="masters">  
- 
-  <ion-card>
-        
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="assets/image/bandit.jpeg">
-            </ion-avatar>
-            <h2>pestol shop</h2>
-            <p>November 5, 1955</p>
-          </ion-item>
-        
-          <img src="assets/image/pistol.jpg">
-        
-          <ion-card-content>
-            <p>This is my site man, can you feel what i feel? its just like BOOM, you know?.</p>
-          </ion-card-content>
-        
-          <ion-row>
-            <ion-col>
-              <button ion-button icon-left clear small>
-                <ion-icon name="thumbs-up"></ion-icon>
-                <div>12 Likes</div>
-              </button>
-            </ion-col>
-            <ion-col>
-              <button ion-button icon-left clear small>
-                <ion-icon name="text"></ion-icon>
-                <div>4 Comments</div>
-              </button>
-            </ion-col>
-            <ion-col center text-center>
-              <ion-note>
-                11h ago
-              </ion-note>
-            </ion-col>
-          </ion-row>
-        
+<ion-content class="card-background-page">
+    <ion-thumbnail style="margin-top: 2px">
+      <ion-slides autoplay="800" loop="true" speed="700">
+        <ion-slide>
+          <img src="assets/image/VMD.jpg">
+        </ion-slide>
+      </ion-slides>
+      
+      <div class="segment"><b>Categories of Service Maker </b></div>
+
+      <ion-col col-4>
+        <ion-card style="margin-top: -2px; margin-left: 1px; width: 100%; height: 100% !important;" (click)="buah()">
+          <img src="assets/image/mobile.jpg" />
         </ion-card>
+      </ion-col>
 
-        <button ion-button color="blue" outline (click)="presentActionSheet()">Silahkan Klik</button>
-        <button ion-button color="secondary" clear  (click)="showAlert()">Silahkan Klik</button>
-        <button ion-button color="secondary" clear (click)="presentLoading()">Silahkan Klik</button>
-        <button ion-button color="secondary" clear (click)="presentModal()">Modal</button>
+      <ion-col col-4>
+        <ion-card style="margin-top: -30px; margin-left: 1px; width: 100%; height: 60% !important;" (click)="bumbu()">
+          <img src="assets/image/web.jpg" />
+        </ion-card>
+      </ion-col>
+    
+    </ion-thumbnail>
 
-        <ion-list>
-          
-            <ion-item>
-              <ion-label fixed>Username</ion-label>
-              <ion-input type="text" value=""></ion-input>
-            </ion-item>
-          
-            <ion-item>
-              <ion-label fixed>Password</ion-label>
-              <ion-input type="password"></ion-input>
-            </ion-item>
-          
-          </ion-list>
-
-          <ion-list>
-            
-              <ion-item>
-                <ion-label floating>Username</ion-label>
-                <ion-input type="text"></ion-input>
-              </ion-item>
-            
-              <ion-item>
-                <ion-label>Password</ion-label>
-                <ion-input type="password"></ion-input>
-              </ion-item>
-          
-              <ion-item>
-                <ion-label>Start Time</ion-label>
-                <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" ></ion-datetime>
-              </ion-item>
-
-            </ion-list>
-
-            <button ion-button color="red" clear (click)="presentModal()">present modal</button>
-            
-      </ion-content>
+  </ion-content>
