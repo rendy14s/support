@@ -9,17 +9,18 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
   public username: any;
-
+  
   constructor(public navCtrl: NavController,
-    public actionSheetCtrl: ActionSheetController,
-    public loadingCtrl: LoadingController,
-    public navparams: NavParams
-  ) {
-    this.username = this.navparams.get('name'); //fungsi ini digunakan untuk menarik data variable
-    this.presentLoading();
-  }
-
+     public actionSheetCtrl: ActionSheetController,
+     public loadingCtrl: LoadingController,
+     public navparams: NavParams
+    ) {
+      this.username = this.navparams.get('name'); //fungsi ini digunakan untuk menarik data variable
+       this.presentLoading();
+     }
+    
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Modify your album',
@@ -30,12 +31,12 @@ export class HomePage {
           handler: () => {
             console.log('Destructive clicked');
           }
-        }, {
+        },{
           text: 'Archive',
           handler: () => {
             console.log('Archive clicked');
           }
-        }, {
+        },{
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
@@ -47,6 +48,11 @@ export class HomePage {
     actionSheet.present();
   }
 
+  // ionViewDidLoad() {
+  //   this.username = this.navparams.get('name');
+  //   console.log(this.username);
+  // }
+  // coding di atas memiliki fungsi sama dengan this.username = this.navparams.get('name');
 
   presentLoading() {
     let loader = this.loadingCtrl.create({
@@ -54,19 +60,5 @@ export class HomePage {
       duration: 800
     });
     loader.present();
-
-  }
-  team() {
-    this.navCtrl.push('TeamPage');
-  }
-
-  product() {
-    this.navCtrl.push('ProductPage');
-  }
-
-  aboutus() {
-    this.navCtrl.push('ProfilePage');
   }
 }
-
-
