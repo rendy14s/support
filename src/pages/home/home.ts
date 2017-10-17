@@ -11,12 +11,14 @@ import { LoadingController } from 'ionic-angular';
 export class HomePage {
   public username: any;
 
+  public username: any;
+  
   constructor(public navCtrl: NavController,
      public actionSheetCtrl: ActionSheetController,
      public loadingCtrl: LoadingController,
-     public navparams: NavParams) { 
-       this.username = this.navparams.get('name');
-     
+     public navparams: NavParams
+    ) {
+      this.username = this.navparams.get('name'); //fungsi ini digunakan untuk menarik data variable
        this.presentLoading();
      }
     
@@ -46,6 +48,12 @@ export class HomePage {
     });
     actionSheet.present();
   }
+
+  // ionViewDidLoad() {
+  //   this.username = this.navparams.get('name');
+  //   console.log(this.username);
+  // }
+  // coding di atas memiliki fungsi sama dengan this.username = this.navparams.get('name');
 
   presentLoading() {
     let loader = this.loadingCtrl.create({

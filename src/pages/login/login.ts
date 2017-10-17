@@ -15,9 +15,10 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
   templateUrl: 'login.html',
 })
 export class LoginPage {
-public username : any;
-public password : any;
-
+  
+  public username: any;
+  public password: any;
+  
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public modalCtrl: ModalController) {
@@ -32,6 +33,7 @@ public password : any;
     modal.present();
   }
   login() {
-    this.navCtrl.setRoot(HomePage,{name: this.username })
+    this.navCtrl.setRoot(HomePage, { name: this.username })
+
   }
 }
