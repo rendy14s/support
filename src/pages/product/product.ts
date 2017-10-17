@@ -21,5 +21,13 @@ export class ProductPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage');
   }
-
+  website() {
+    this.navCtrl.push('WebsitePage');
+  }
+  android() {
+    this.navCtrl.push('AndroidPage');
+  }
+  ios() {
+    this.navCtrl.push('IosPage');
+}
 }
