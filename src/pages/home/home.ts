@@ -60,5 +60,21 @@ export class HomePage {
       duration: 800
     });
     loader.present();
+}
+
+  team_our() {
+    this.navCtrl.push('TeamPage');
+  }
+
+  product_our() {
+    this.navCtrl.push('ProductPage');
+  }
+
+  aboutus() {
+    this.navCtrl.push('ProfilePage');
   }
 }
+
+  }
+}
+
