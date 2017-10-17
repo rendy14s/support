@@ -7,28 +7,32 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="card-background-page">
+<ion-content>
     <ion-thumbnail style="margin-top: 2px">
       <ion-slides autoplay="800" loop="true" speed="700">
         <ion-slide>
-          <img src="assets/image/VMD.jpg">
+          <img src="assets/image/VMD.jpg" class="image-slide">
         </ion-slide>
+        <ion-slide>
+        <img src="assets/image/web.jpg" class="image-slide">
+        </ion-slide>
+       <ion-slide>
+       <img src="assets/image/mobile.jpg" class="image-slide">
+      </ion-slide>
       </ion-slides>
-      
-      <div class="segment"><b>Categories of Service Maker </b></div>
-
-      <ion-col col-4>
-        <ion-card style="margin-top: -2px; margin-left: 1px; width: 100%; height: 100% !important;" (click)="mobiledev()">
-          <img src="assets/image/mobile.jpg" />
-        </ion-card>
-      </ion-col>
-
-      <ion-col col-4>
-        <ion-card style="margin-top: -30px; margin-left: 1px; width: 100%; height: 60% !important;" (click)="webdev()">
-          <img src="assets/image/web.jpg" />
-        </ion-card>
-      </ion-col>
-    
     </ion-thumbnail>
+
+      <div class="segment"><b>Welcome {{username}} </b></div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+              <img src="assets/image/product.png" class="image-slide2"> <b>Product</b></ion-col>
+          <ion-col text-center>
+              <img src="assets/image/aboutus.jpg" class="image-slide2"><b>About Us</b></ion-col>
+          <ion-col text-center>
+              <img src="assets/image/team.jpg" class="image-slide2"><b>Team</b></ion-col>
+        </ion-row>
+      </ion-grid>
 
   </ion-content>
