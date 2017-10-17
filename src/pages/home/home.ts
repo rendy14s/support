@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 
@@ -9,10 +9,14 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  public username: any;
 
   constructor(public navCtrl: NavController,
      public actionSheetCtrl: ActionSheetController,
-     public loadingCtrl: LoadingController) {
+     public loadingCtrl: LoadingController,
+     public navparams: NavParams) { 
+       this.username = this.navparams.get('name');
+     
        this.presentLoading();
      }
     
@@ -49,5 +53,13 @@ export class HomePage {
       duration: 800
     });
     loader.present();
+  
   }
+
+  // ionViewDidLoad() {
+  //   this.username = this.navparams.get('name:');
+  //   console.log(this.username);
+  // }
 }
+
+ 
