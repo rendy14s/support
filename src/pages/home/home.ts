@@ -9,8 +9,9 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  public username: any;
 
+  public username: any;
+  
   constructor(public navCtrl: NavController,
      public actionSheetCtrl: ActionSheetController,
      public loadingCtrl: LoadingController,
@@ -59,13 +60,5 @@ export class HomePage {
       duration: 800
     });
     loader.present();
-  
   }
-
-  // ionViewDidLoad() {
-  //   this.username = this.navparams.get('name:');
-  //   console.log(this.username);
-  // }
 }
-
- 
