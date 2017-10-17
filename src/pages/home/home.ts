@@ -56,11 +56,11 @@ export class HomePage {
     loader.present();
 
   }
-  team() {
+  team_our() {
     this.navCtrl.push('TeamPage');
   }
 
-  product() {
+  product_our() {
     this.navCtrl.push('ProductPage');
   }
 
