@@ -16,14 +16,6 @@ page-home {
             margin-left: -13px;
           }
         
-          .card-subtitle {
-            font-size: 1.0em;
-            position: absolute;
-            top: 52%;
-            width: 100%;
-            color: #fff;
-          }
-        
         }
         
             .segment{
@@ -34,36 +26,5 @@ page-home {
               padding: 10px 15px;
               margin-bottom: 5px;
             }
-        
-            .segment_hot{
-              background-color: dimgray;
-              height: 9%;
-              margin-top: -26px;
-              padding: 10px 15px;
-              margin-bottom: 5px;
-            }
-        
-             .p{
-                  margin-top: 1%;
-                  color: bisque;
-                  font-family: 'Arial';
-                  font-weight: bold;
-                  font-size: medium;
-               }
-              
-               .p-hot{
-                  margin-top: 1%;
-                  color: bisque;
-                  font-family: 'Arial';
-                  font-weight: bold;
-                  font-size: medium;
-               }
-              
-               .col-cuy{
-                 margin-top: -2px; 
-                 margin-left: 1px; 
-                 width: 100%; 
-                 height: 80% !important;
-               }
         
 }
