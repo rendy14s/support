@@ -13,20 +13,20 @@ export class MyApp {
 
   rootPage: any = 'LoginPage';
 
-  pages: Array<{title: string, component: any}>;
-
-  public photo: any = 'assets/image/porsche.jpg';
+  public pages: Array<{title: string, component: any, icons: any }>;
+  public photo: any = 'assets/image/VMD.jpg';
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Dasboard', component: HomePage },
-      { title: 'Profil', component: 'ProfilePage' },
-      { title: 'Company Profile', component: 'ProfilCompanyPage' },
-      { title: 'Detail', component: 'DetailPage' },
-      { title: 'Order', component: 'OrderPage' },
+
+      { title: 'Dasboard', component: HomePage,  icons: 'ios-home' },
+      { title: 'About Us', component: 'ProfilePage', icons: 'md-help-circle' },
+      { title: 'Team', component: 'TeamPage', icons: 'ios-contacts' },
+      { title: 'Product', component: 'ProductPage', icons: 'md-cart' },
+
       
     ];
 
