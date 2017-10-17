@@ -48,12 +48,7 @@ export class HomePage {
     actionSheet.present();
   }
 
-  // ionViewDidLoad() {
-  //   this.username = this.navparams.get('name');
-  //   console.log(this.username);
-  // }
-  // coding di atas memiliki fungsi sama dengan this.username = this.navparams.get('name');
-
+  
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Please wait...",
@@ -73,8 +68,6 @@ export class HomePage {
   aboutus() {
     this.navCtrl.push('ProfilePage');
   }
-}
 
-  }
 }
 
