@@ -22,4 +22,8 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
   }
 
+  edit(){
+    this.navCtrl.push('EditProfilPage');
+  }
+
 }
