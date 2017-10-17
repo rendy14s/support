@@ -1,18 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle >
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
+    <ion-thumbnail style="margin-top: 2px">
+      <ion-slides autoplay="800" loop="true" speed="700">
+        <ion-slide>
+          <img src="assets/image/VMD.jpg" class="image-slide">
+        </ion-slide>
+        <ion-slide>
+        <img src="assets/image/web.jpg" class="image-slide">
+        </ion-slide>
+       <ion-slide>
+       <img src="assets/image/mobile.jpg" class="image-slide">
+      </ion-slide>
+      </ion-slides>
+    </ion-thumbnail>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+      <div class="segment"><b>Welcome {{username}} </b></div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col text-center>
+              <img src="assets/image/product.png" class="image-slide2"> <b>Product</b></ion-col>
+          <ion-col text-center>
+              <img src="assets/image/aboutus.jpg" class="image-slide2"><b>About Us</b></ion-col>
+          <ion-col text-center>
+              <img src="assets/image/team.jpg" class="image-slide2"><b>Team</b></ion-col>
+        </ion-row>
+      </ion-grid>
+
+  </ion-content>
