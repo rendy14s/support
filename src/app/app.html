@@ -14,11 +14,13 @@
 
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
+        <ion-icon name="{{p.icons}}" item-left></ion-icon>
       </button>
     </ion-list>
 
-    <button menuClose ion-item  (click)="logout()">
-        Logout
+    <button menuClose ion-item (click)="logout()">
+        <ion-icon name="md-exit" item-left></ion-icon>
+      Logout
       </button>
 
   </ion-content>
