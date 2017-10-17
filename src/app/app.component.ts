@@ -21,10 +21,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+
       { title: 'Dasboard', component: HomePage,  icons: 'ios-home' },
       { title: 'About Us', component: 'ProfilePage', icons: 'md-help-circle' },
       { title: 'Team', component: 'TeamPage', icons: 'ios-contacts' },
       { title: 'Product', component: 'ProductPage', icons: 'md-cart' },
+
       
     ];
 
