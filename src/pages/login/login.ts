@@ -17,6 +17,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 export class LoginPage {
   public username: any;
   public password: any;
+ 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     public modalCtrl: ModalController) {
