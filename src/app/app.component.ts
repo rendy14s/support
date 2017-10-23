@@ -26,6 +26,7 @@ export class MyApp {
       { title: 'About Us', component: 'ProfilePage', icons: 'md-help-circle' },
       { title: 'Team', component: 'TeamPage', icons: 'ios-contacts' },
       { title: 'Product', component: 'ProductPage', icons: 'md-cart' },
+      { title: 'Booking-System', component: 'BookingSystemPage', icons: 'md-cart'},
 
       
     ];
