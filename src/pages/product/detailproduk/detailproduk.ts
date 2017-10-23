@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ProductPage page.
+ * Generated class for the DetailprodukPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,24 +10,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-product',
-  templateUrl: 'product.html',
+  selector: 'page-detailproduk',
+  templateUrl: 'detailproduk.html',
 })
-export class ProductPage {
+export class DetailprodukPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProductPage');
+    console.log('ionViewDidLoad DetailprodukPage');
   }
-  website() {
-    this.navCtrl.push('WebsitePage');
+  
+  booking() {
+    this.navCtrl.push('BookingSystemPage');
   }
-  android() {
-    this.navCtrl.push('AndroidPage');
-  }
-  ios() {
-    this.navCtrl.push('IosPage');
-}
+
 }

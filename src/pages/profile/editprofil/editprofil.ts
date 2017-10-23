@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the EditprofilPage page.
@@ -15,7 +15,8 @@ import { IonicPage, NavController, NavParams, ViewController, ModalController } 
 })
 export class EditprofilPage {
 
-  constructor(public navCtrl: NavController, 
+  constructor(
+    public navCtrl: NavController, 
     public navParams: NavParams,
     public viewCtrl: ViewController) {
   }

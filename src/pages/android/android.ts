@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the ProductPage page.
+ * Generated class for the AndroidPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,24 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-product',
-  templateUrl: 'product.html',
+  selector: 'page-android',
+  templateUrl: 'android.html',
 })
-export class ProductPage {
+export class AndroidPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProductPage');
+    console.log('ionViewDidLoad AndroidPage');
   }
-  website() {
-    this.navCtrl.push('WebsitePage');
+  
+  produkdetail() {
+    this.navCtrl.push('DetailprodukPage');
   }
-  android() {
-    this.navCtrl.push('AndroidPage');
-  }
-  ios() {
-    this.navCtrl.push('IosPage');
-}
 }
