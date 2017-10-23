@@ -21,5 +21,7 @@ export class BookingSystemPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookingSystemPage');
   }
-
+  Booking(){
+    this.navCtrl.push('GreetingPage');
+  }
 }
