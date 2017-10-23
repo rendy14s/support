@@ -22,4 +22,8 @@ export class IosPage {
     console.log('ionViewDidLoad IosPage');
   }
 
+  produkdetail() {
+    this.navCtrl.push('DetailprodukPage');
+  }
 }
+

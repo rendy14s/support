@@ -21,5 +21,8 @@ export class AndroidPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AndroidPage');
   }
-
+  
+  produkdetail() {
+    this.navCtrl.push('DetailprodukPage');
+  }
 }
