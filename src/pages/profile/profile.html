@@ -9,25 +9,42 @@
   
     <ion-navbar color="primary">
   
-  
-        <button ion-button menuToggle >
+      <button ion-button menuToggle >
           <ion-icon name="menu"></ion-icon>
-        </button>
-      <ion-title>About Us</ion-title>
+      </button>
+           <ion-title>About Us</ion-title>
+           
     </ion-navbar>
   
-  </ion-header>
+</ion-header>
   
-  <ion-content padding>
+  <ion-content>
       <img src="assets/image/VMD.jpg" class="image-slide">
 
-      <div text-center class="segment"><b>Nama Team </b></div>
-      <div text-center class="segment"><b>Sejarah Team </b></div>
-      <div text-center class="segment"><b>Contact Person </b></div>
-      <div text-center class="segment"><b>DLL </b></div>
+      <ion-list>
+        
+          <ion-item>
+            <p class="example">Employee Of Team</p>
+            <h2 class="tester">VMD Indonesia</h2>
+            </ion-item>
+        
+            <ion-item text-wrap>
+                <p class="example">History Of Team</p>
+                <h2 class="tester">Awal mula team ini terbentuk ketika seorang mahasiswa esa unggul yang bernama aji tirta yang mempunyai keinginan</h2>
+                </ion-item>
 
-          
-   <button ion-button color="primary" round (click)="editprofil()" >Edit Profil</button>
+            <ion-item>
+                <p class="example">Contact Person</p>
+                <h2 class="tester">VMDIndonesia@gmail.com</h2>
+                </ion-item>
+
+            <ion-item>
+                    <p class="example">Addres</p>
+                    <h2 class="tester">Bintaro Jaya X-Change</h2>
+                    </ion-item>
+        
+        </ion-list>
+        
   </ion-content>
   
 
