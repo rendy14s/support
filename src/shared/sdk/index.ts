@@ -50,6 +50,7 @@ import { SocketConnection } from './sockets/socket.connections';
 import { RealTime } from './services/core/real.time';
 import { UserApi } from './services/custom/User';
 import { VMDMasteruserdataApi } from './services/custom/VMDMasteruserdata';
+import { VMDUsercredentialApi } from './services/custom/VMDUsercredential';
 /**
 * @module SDKBrowserModule
 * @description
@@ -83,6 +84,7 @@ export class SDKBrowserModule {
         RealTime,
         UserApi,
         VMDMasteruserdataApi,
+        VMDUsercredentialApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }

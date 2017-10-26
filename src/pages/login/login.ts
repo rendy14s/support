@@ -1,6 +1,6 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-
+import { UserApi } from './../../shared/sdk/services/custom/user';
 
 /**
  * Generated class for the LoginPage page.
@@ -74,7 +74,9 @@ export class LoginPage {
  
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
-    public modalCtrl: ModalController) {
+    public modalCtrl: ModalController,
+    public userApi: UserApi
+  ) {
   }
 
   ionViewDidLoad() {
@@ -86,6 +88,16 @@ export class LoginPage {
     modal.present();
   }
   login() {
-    this.navCtrl.setRoot('HomePage', { name: this.username }); //fungsi ini untuk melempar variable
+    this.userApi.find({
+      where: {
+        and: [
+          { username: this.username },
+          { password: this.password }
+        ]
+      }
+    }).subscribe((loginDo) => {
+      console.log(loginDo);
+    })
+    // this.navCtrl.setRoot('HomePage', { name: this.username }); //fungsi ini untuk melempar variable
   }
 }
