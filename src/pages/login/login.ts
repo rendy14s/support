@@ -1,4 +1,3 @@
-import { HomePage } from './../home/home';
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
@@ -87,6 +86,6 @@ export class LoginPage {
     modal.present();
   }
   login() {
-    this.navCtrl.setRoot(HomePage, { name: this.username }) //fungsi ini untuk melempar variable
+    this.navCtrl.setRoot('HomePage', { name: this.username }) //fungsi ini untuk melempar variable
   }
 }
