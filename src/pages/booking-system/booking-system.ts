@@ -26,6 +26,6 @@ export class BookingSystemPage {
 }
 
   gogreeting() {
-    this.navCtrl.push('bookingSystemPage'); //PUNYA WANTEK BELOM KELAR
+    this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
   }
 }
