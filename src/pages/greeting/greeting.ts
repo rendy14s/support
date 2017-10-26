@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from './../home/home';
 
 /**
  * Generated class for the GreetingPage page.
@@ -24,6 +23,6 @@ export class GreetingPage {
   }
 
   ok() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot('HomePage');
 }
 }
