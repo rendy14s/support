@@ -2,23 +2,15 @@
 
 declare var Object: any;
 export interface VMDUsercredentialInterface {
-  "realm": string;
   "username": string;
+  "password": string;
   "id"?: number;
-  "email": string;
-  "emailVerified"?: boolean;
-  "password"?: string;
-  accessTokens?: any[];
 }
 
 export class VMDUsercredential implements VMDUsercredentialInterface {
-  "realm": string;
   "username": string;
-  "id": number;
-  "email": string;
-  "emailVerified": boolean;
   "password": string;
-  accessTokens: any[];
+  "id": number;
   constructor(data?: VMDUsercredentialInterface) {
     Object.assign(this, data);
   }
@@ -51,37 +43,20 @@ export class VMDUsercredential implements VMDUsercredentialInterface {
       plural: 'VMDUsercredentials',
       path: 'VMDUsercredentials',
       properties: {
-        "realm": {
-          name: 'realm',
-          type: 'string'
-        },
         "username": {
           name: 'username',
+          type: 'string'
+        },
+        "password": {
+          name: 'password',
           type: 'string'
         },
         "id": {
           name: 'id',
           type: 'number'
         },
-        "email": {
-          name: 'email',
-          type: 'string'
-        },
-        "emailVerified": {
-          name: 'emailVerified',
-          type: 'boolean'
-        },
-        "password": {
-          name: 'password',
-          type: 'string'
-        },
       },
       relations: {
-        accessTokens: {
-          name: 'accessTokens',
-          type: 'any[]',
-          model: ''
-        },
       }
     }
   }
