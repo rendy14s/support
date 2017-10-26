@@ -9,18 +9,25 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+   
+  
   public username: any;
   
   constructor(public navCtrl: NavController,
      public actionSheetCtrl: ActionSheetController,
      public loadingCtrl: LoadingController,
      public navparams: NavParams
-    ) {
+    )
+    
+    {
       this.username = this.navparams.get('name'); //fungsi ini digunakan untuk menarik data variable
        this.presentLoading();
      }
     
+     ionViewDidLoad() {
+      console.log('ionViewDidLoad HomePage');
+    }
+
   presentActionSheet() {
     let actionSheet = this.actionSheetCtrl.create({
       title: 'Modify your album',
