@@ -21,6 +21,9 @@ export class BookingSystemPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BookingSystemPage');
   }
+  Booking() {
+    this.navCtrl.push('GreetingPage');
+}
 
   gogreeting() {
     this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
