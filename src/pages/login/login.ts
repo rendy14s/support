@@ -86,6 +86,6 @@ export class LoginPage {
     modal.present();
   }
   login() {
-    this.navCtrl.setRoot('HomePage', { name: this.username }) //fungsi ini untuk melempar variable
+    this.navCtrl.setRoot('HomePage', { name: this.username }); //fungsi ini untuk melempar variable
   }
 }
