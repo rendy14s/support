@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SDKBrowserModule } from '../shared/sdk/index';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     SDKBrowserModule.forRoot(),
+    IonicStorageModule.forRoot(),
     BrowserAnimationsModule,
   ],
   bootstrap: [IonicApp],
