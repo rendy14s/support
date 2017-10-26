@@ -1,6 +1,7 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { VMDUsercredentialApi } from './../../shared/sdk/services/custom/VMDUsercredential';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the LoginPage page.
@@ -75,7 +76,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
-    public VMDusercredentialApi: VMDUsercredentialApi
+    public VMDusercredentialApi: VMDUsercredentialApi,
+    public storage: Storage
   ) {
   }
 
@@ -98,6 +100,8 @@ export class LoginPage {
       }
     }).subscribe((result) => {
       console.log(result);
+
+      this.storage.set('Credential', result);
     })
   }
 
