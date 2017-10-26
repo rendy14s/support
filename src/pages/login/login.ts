@@ -1,5 +1,5 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { VMDUsercredentialApi } from './../../shared/sdk/services/custom/VMDUsercredential';
 import { Storage } from '@ionic/storage';
 
@@ -73,11 +73,14 @@ export class LoginPage {
   public username: any;
   public password: any;
 
+  public dataLogin: any;
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
     public VMDusercredentialApi: VMDUsercredentialApi,
-    public storage: Storage
+    public storage: Storage,
+    public alertCtrl: AlertController
   ) {
   }
 
@@ -101,7 +104,18 @@ export class LoginPage {
     }).subscribe((result) => {
       console.log(result);
 
-      this.storage.set('Credential', result);
+      this.dataLogin = result;
+      if(this.dataLogin.length == 1) {
+        this.storage.set('Credential', result);
+        this.navCtrl.setRoot('HomePage');
+      } else {
+        let alert = this.alertCtrl.create({
+          subTitle: 'Ups.. Sorry! username or password is wrong',
+          buttons: ['OK']
+        });
+        alert.present();
+      }
+      
     })
   }
 
