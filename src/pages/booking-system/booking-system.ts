@@ -19,13 +19,13 @@ export class BookingSystemPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BookingSystemPage');
+    console.log('ionViewDidLoad bookingSystemPage');
   }
-  Booking() {
+  booking() {
     this.navCtrl.push('GreetingPage');
 }
 
   gogreeting() {
-    this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
+    this.navCtrl.push('bookingSystemPage'); //PUNYA WANTEK BELOM KELAR
   }
 }
