@@ -34,8 +34,8 @@ export class DetailprodukPage {
     console.log('ionViewDidLoad DetailprodukPage');
   }
   
-  website() {
-    this.navCtrl.push('WebsitePage');
+  booking() {
+    this.navCtrl.push('BookingSystemPage');
   }
 
 }

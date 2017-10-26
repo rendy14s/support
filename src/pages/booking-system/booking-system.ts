@@ -22,4 +22,7 @@ export class BookingSystemPage {
     console.log('ionViewDidLoad BookingSystemPage');
   }
 
+  gogreeting() {
+    this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
+  }
 }
