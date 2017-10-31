@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, } from 'ionic-angular';
 import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
 /**
  * Generated class for the BookingSystemPage page.
@@ -14,14 +14,14 @@ import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
   templateUrl: 'booking-system.html',
 })
 export class BookingSystemPage {
-  fullname: any;
-  address: any;
-  application: any;
-  description: any;
+  public fullname: any;
+  public address: any;
+  public application: any;
+  public description: any;
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDBooking: VMDBookingApi ) {
+    public VMDBooking: VMDBookingApi) {
   }
 
   ionViewDidLoad() {
@@ -33,13 +33,8 @@ export class BookingSystemPage {
       address: this.address,
       application: this.application,
       description: this.description
-    })  .subscribe ((result)=>{
+    }).subscribe((result) => {
       console.log(result);
     })
-    // this.navCtrl.push('GreetingPage');
-}
-
-  // gogreeting() {
-  //   this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
-  // }
+  }
 }
