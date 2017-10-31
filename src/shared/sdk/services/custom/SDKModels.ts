@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { User } from '../../models/User';
 import { VMDMasteruserdata } from '../../models/VMDMasteruserdata';
 import { VMDMasterEmmployeeCredential } from '../../models/VMDMasterEmmployeeCredential';
+import { VMDAboutUs } from '../../models/VMDAboutUs';
+import { VMDTeam } from '../../models/VMDTeam';
+import { VMDBooking } from '../../models/VMDBooking';
 
 export interface Models { [name: string]: any }
 
@@ -13,6 +16,9 @@ export class SDKModels {
     User: User,
     VMDMasteruserdata: VMDMasteruserdata,
     VMDMasterEmmployeeCredential: VMDMasterEmmployeeCredential,
+    VMDAboutUs: VMDAboutUs,
+    VMDTeam: VMDTeam,
+    VMDBooking: VMDBooking,
     
   };
 

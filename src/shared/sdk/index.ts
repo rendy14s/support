@@ -51,6 +51,9 @@ import { RealTime } from './services/core/real.time';
 import { UserApi } from './services/custom/User';
 import { VMDMasteruserdataApi } from './services/custom/VMDMasteruserdata';
 import { VMDMasterEmmployeeCredentialApi } from './services/custom/VMDMasterEmmployeeCredential';
+import { VMDAboutUsApi } from './services/custom/VMDAboutUs';
+import { VMDTeamApi } from './services/custom/VMDTeam';
+import { VMDBookingApi } from './services/custom/VMDBooking';
 /**
 * @module SDKBrowserModule
 * @description
@@ -85,6 +88,9 @@ export class SDKBrowserModule {
         UserApi,
         VMDMasteruserdataApi,
         VMDMasterEmmployeeCredentialApi,
+        VMDAboutUsApi,
+        VMDTeamApi,
+        VMDBookingApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }

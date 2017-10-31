@@ -104,6 +104,9 @@ export class LoginPage {
 
     this.VMDUserLogin.login(data).subscribe((result) => {
       console.log(result);
+
+      this.storage.set('vmdStorage', result);
+      this.navCtrl.setRoot('HomePage');
     })
   }
 
