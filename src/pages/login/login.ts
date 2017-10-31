@@ -1,8 +1,8 @@
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
-import { VMDUsercredentialApi } from './../../shared/sdk/services/custom/VMDUsercredential';
 import { Storage } from '@ionic/storage';
-import { CredentialUserApi } from './../../shared/sdk/services/custom/CredentialUser';
+import { VMDMasterEmmployeeCredentialApi } from './../../shared/sdk/services/custom/VMDMasterEmmployeeCredential';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -79,10 +79,9 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
-    public VMDusercredentialApi: VMDUsercredentialApi,
+    public VMDUserLogin: VMDMasterEmmployeeCredentialApi,
     public storage: Storage,
-    public alertCtrl: AlertController,
-    public credentialUser: CredentialUserApi
+    public alertCtrl: AlertController
   ) {
   }
 
@@ -103,33 +102,9 @@ export class LoginPage {
       ttl: 60 * 60 * 24 * 30
     };
 
-    console.log(data);
-    this.credentialUser.login(data).subscribe((result) => {
+    this.VMDUserLogin.login(data).subscribe((result) => {
       console.log(result);
     })
-    // this.VMDusercredentialApi.find({
-    //   where: {
-    //     and: [
-    //       { username: this.username },
-    //       { password: this.password }
-    //     ]
-    //   }
-    // }).subscribe((result) => {
-    //   console.log(result);
-
-    //   this.dataLogin = result;
-    //   if(this.dataLogin.length == 1) {
-    //     this.storage.set('Credential', result);
-    //     this.navCtrl.setRoot('HomePage');
-    //   } else {
-    //     let alert = this.alertCtrl.create({
-    //       subTitle: 'Ups.. Sorry! username or password maybe wrong',
-    //       buttons: ['OK']
-    //     });
-    //     alert.present();
-    //   }
-      
-    // })
   }
 
 }
