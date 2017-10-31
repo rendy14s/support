@@ -15,7 +15,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetailprodukPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public picture: any;
+  public header: any;
+  public titleProduct: any;
+  public description: any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+  ) {
+    this.picture = this.navParams.get ('picture')
+    this.header = this.navParams.get('header');
+    this.titleProduct = this.navParams.get('titleProduct');
+    this.description = this.navParams.get('description');
   }
 
   ionViewDidLoad() {

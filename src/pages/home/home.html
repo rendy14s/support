@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <button ion-button menuToggle >
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Home</ion-title>
@@ -8,71 +8,75 @@
 </ion-header>
 
 <ion-content>
-    <ion-thumbnail style="margin-top: 2px">
-      <ion-slides autoplay="800" loop="true" speed="700">
-        <ion-slide>
-          <img src="assets/image/VMD.jpg" class="image-slide">
-        </ion-slide>
-        <ion-slide>
-        <img src="assets/image/web.jpg" class="image-slide">
-        </ion-slide>
-       <ion-slide>
-       <img src="assets/image/mobile.jpg" class="image-slide">
+  <ion-thumbnail style="margin-top: 2px">
+    <ion-slides autoplay="800" loop="true" speed="700">
+      <ion-slide>
+        <img src="assets/image/VMD.jpg" class="image-slide">
       </ion-slide>
-      </ion-slides>
-    </ion-thumbnail>
+      <ion-slide>
+        <img src="assets/image/web.jpg" class="image-slide">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/image/mobile.jpg" class="image-slide">
+      </ion-slide>
+    </ion-slides>
+  </ion-thumbnail>
 
-      <div class="segment"><b>Welcome {{username}} </b></div>
+  <div class="segment">
+    <b>Welcome {{username}} </b>
+  </div>
 
-      <ion-grid>
-        <ion-row>
-        
-          <ion-col text-center (click)="product_our()">
-              <img src="assets/image/product.png" class="image-slide2"> <b>Product</b>
-          </ion-col>
-          
-          <ion-col text-center (click)="aboutus()">
-              <img src="assets/image/aboutus.jpg" class="image-slide2"><b>About Us</b>
-          </ion-col>
-          
-          <ion-col text-center (click)="team_our()">
-              <img src="assets/image/team.jpg" class="image-slide2"><b>Team</b>
-          </ion-col>
-          
-        </ion-row>
-      </ion-grid>
+  <ion-grid>
+    <ion-row>
 
-      <ion-grid>
-          <ion-row>
-              <ion-card>
-                  <ion-card-header text-center>
-                   <b> Who we are? </b>
-                  </ion-card-header>
-                  <ion-card-content text-justify>
-                  We are vision mobile developer does to help themself for a solution about software engineer exactly mobile aplication  
-                  </ion-card-content>
-                </ion-card>
-          </ion-row>
-        </ion-grid>
+      <ion-col text-center (click)="product_our()">
+        <img src="assets/image/product.png" class="image-slide3">
+        <b>Product</b>
+      </ion-col>
 
-        <div class="segment"><b>Our Client </b></div>
-        
-              <ion-grid>
-                <ion-row>
-                
-                  <ion-col text-center >
-                      <img src="assets/image/esaunggul.jpg" class="image-slide2"> <b>Student of UEU</b>
-                  </ion-col>
-                  
-                  <ion-col text-center>
-                      <img src="assets/image/umb.png" class="image-slide2"><b>Student of UMB</b>
-                  </ion-col>
-                  
-                  <ion-col text-center>
-                      <img src="assets/image/binus.png" class="image-slide2"><b>Student of UBN</b>
-                  </ion-col>
-                  
-                </ion-row>
-              </ion-grid>
+      <ion-col text-center (click)="aboutus()">
+        <img src="assets/image/aboutus.jpg" class="image-slide3">
+        <b>About Us</b>
+      </ion-col>
 
-  </ion-content>
+      <ion-col text-center (click)="team_our()">
+        <img src="assets/image/team.jpg" class="image-slide3">
+        <b>Team</b>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-card>
+        <ion-card-header text-center>
+          <b> Who we are? </b>
+        </ion-card-header>
+        <ion-card-content text-justify>
+          We are vision mobile developer does to help themself for a solution about software engineer exactly mobile aplication
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/image/esaunggul.jpg" class="image-slide2">
+        <b class="title-font">Student of UEU</b>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/image/umb.png" class="image-slide2">
+        <b class="title-font">Student of UMB</b>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/image/binus.png" class="image-slide2">
+        <b class="title-font">Student of UBN</b>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

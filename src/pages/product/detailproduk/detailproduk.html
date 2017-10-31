@@ -7,13 +7,30 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Detail Produk</ion-title>
+    <ion-title>{{header}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+<<<<<<< HEAD
+  
+  <ion-card>
+    <img src="{{picture}}"/>
+    <ion-card-content>
+      <ion-card-title text-center>
+        <b>{{titleProduct}}</b>
+        </ion-card-title>
+      <p text-justify>
+        {{description}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+  
+  <button ion-button color="primary" block (click)="booking()">Booking System</button>
+</ion-content>
+=======
   <ion-grid>
     <ion-row>
       <ion-col text-center>
@@ -31,4 +48,5 @@
             </ion-card>
         <button class="image" ion-button class="image" color="primary" (click)="booking()">Booking System</button>
       </ion-content>
+>>>>>>> master
 

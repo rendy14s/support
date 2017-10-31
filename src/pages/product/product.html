@@ -6,30 +6,31 @@
 -->
 <ion-header>
 
-    <ion-navbar color="primary">
-    
+    <ion-navbar color="primary">    
     
           <button ion-button menuToggle >
             <ion-icon name="menu"></ion-icon>
           </button>
-
   
     <ion-title>Product</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-list>
-    <button ion-item (click)="website()">
-      Website
-    </button>  
-    <button ion-item (click)="android()">
-     Android
-    </button>
-    <button ion-item (click)="ios()">
-      Ios
-    </button>
-  </ion-list>
+  <ion-slides pager autoplay="800" loop="true" speed="700">
+    
+      <ion-slide  >
+        <h2>  <img src="assets/image/webdevelop.png" class="image-slide" (click)="web()"> Website System</h2>
+      </ion-slide>
+    
+      <ion-slide >
+        <h2><img src="assets/image/Android.jpg" class="image-slide" (click)="android()"> Android Aplication</h2>
+      </ion-slide>
+    
+      <ion-slide >
+        <h2> <img src="assets/image/IOS.jpg" class="image-slide" (click)="ios()"> IOS Aplication</h2>
+      </ion-slide>
+    
+    </ion-slides>
 </ion-content>

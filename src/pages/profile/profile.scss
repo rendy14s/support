@@ -1,15 +1,18 @@
 page-profile {
     .image-slide {
-        width: 700px;
-        height: 200px;
+        width: 250px;
+        height: 150px;
+        margin-left: 35px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+      }
+    .example {
+      color: #000000;
+      font-weight: bold;
       }
 
-      .segment{
-        background-color: dimgray;
-        color: white;
-        height: 9%;
-        margin-top: 2px;
-        padding: 10px 15px;
-        margin-bottom: 5px;
-      }
+    .tester {
+      color: grey;
+      font-size: 15px;
+    }
 }
