@@ -22,4 +22,8 @@ export class TeamPage {
     console.log('ionViewDidLoad TeamPage');
   }
 
+  editteam () {
+    this.navCtrl.push('EditTeamPage');
+  }
+
 }
