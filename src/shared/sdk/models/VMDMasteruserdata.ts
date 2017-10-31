@@ -7,9 +7,9 @@ export interface VMDMasteruserdataInterface {
   "address": string;
   "photo": string;
   "no_telp": string;
-  "tglLahir": string;
+  "tglLahir": Date;
   "statusPerkawinan": string;
-  "tempatLahir": Date;
+  "tempatLahir": string;
 }
 
 export class VMDMasteruserdata implements VMDMasteruserdataInterface {
@@ -18,9 +18,9 @@ export class VMDMasteruserdata implements VMDMasteruserdataInterface {
   "address": string;
   "photo": string;
   "no_telp": string;
-  "tglLahir": string;
+  "tglLahir": Date;
   "statusPerkawinan": string;
-  "tempatLahir": Date;
+  "tempatLahir": string;
   constructor(data?: VMDMasteruserdataInterface) {
     Object.assign(this, data);
   }
@@ -75,7 +75,7 @@ export class VMDMasteruserdata implements VMDMasteruserdataInterface {
         },
         "tglLahir": {
           name: 'tglLahir',
-          type: 'string'
+          type: 'Date'
         },
         "statusPerkawinan": {
           name: 'statusPerkawinan',
@@ -83,7 +83,7 @@ export class VMDMasteruserdata implements VMDMasteruserdataInterface {
         },
         "tempatLahir": {
           name: 'tempatLahir',
-          type: 'Date'
+          type: 'string'
         },
       },
       relations: {
