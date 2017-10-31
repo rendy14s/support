@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the GreetingPage page.
+ * Generated class for the AndroidPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,26 +10,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-greeting',
-  templateUrl: 'greeting.html',
+  selector: 'page-android',
+  templateUrl: 'android.html',
 })
-export class GreetingPage {
+export class AndroidPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GreetingPage');
+    console.log('ionViewDidLoad AndroidPage');
   }
-
-<<<<<<< HEAD:src/pages/greeting/greeting.ts
-  ok() {
-    this.navCtrl.setRoot('HomePage');
-}
-=======
+  
   produkdetail() {
     this.navCtrl.push('DetailprodukPage');
   }
->>>>>>> master:src/pages/ios/ios.ts
 }
-
