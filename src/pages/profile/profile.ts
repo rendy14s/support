@@ -34,5 +34,8 @@ export class ProfilePage {
   editprofil(){
     this.navCtrl.push('EditprofilPage');
   }
+  Edit() {
+    this.navCtrl.push('EditAboutusPage');
+  }
  
 }
