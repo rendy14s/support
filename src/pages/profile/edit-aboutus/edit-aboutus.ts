@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VMDAboutUsApi } from './../../shared/sdk/services/custom/VMDAboutUs';
+import { VMDAboutUsApi } from './../../../shared/sdk/services/custom/VMDAboutUs';
 
 /**
  * Generated class for the EditAboutusPage page.
@@ -22,9 +22,11 @@ export class EditAboutusPage {
 
 
 
-  constructor(public navCtrl: NavController,
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDEdit: VMDAboutUsApi) {
+    public VMDEdit: VMDAboutUsApi
+  ){
   }
 
   ionViewDidLoad() {
