@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,} from 'ionic-angular';
-
+import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
 /**
  * Generated class for the BookingSystemPage page.
  *
@@ -14,18 +14,32 @@ import { IonicPage, NavController, NavParams,} from 'ionic-angular';
   templateUrl: 'booking-system.html',
 })
 export class BookingSystemPage {
+  fullname: any;
+  address: any;
+  application: any;
+  description: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, ) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    public VMDBooking: VMDBookingApi ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad bookingSystemPage');
   }
   booking() {
-    this.navCtrl.push('GreetingPage');
+    this.VMDBooking.create({
+      fullname: this.fullname,
+      address: this.address,
+      application: this.application,
+      description: this.description
+    })  .subscribe ((result)=>{
+      console.log(result);
+    })
+    // this.navCtrl.push('GreetingPage');
 }
 
-  gogreeting() {
-    this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
-  }
+  // gogreeting() {
+  //   this.navCtrl.push('BookingSystemPage'); //PUNYA WANTEK BELOM KELAR
+  // }
 }

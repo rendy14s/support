@@ -19,31 +19,32 @@
 
 
 <ion-content padding>
+  
+    <ion-list>
+        
+          <ion-item>
+            <ion-label stacked [(ngModel)]="fullname()">Full Name :</ion-label>
+            <ion-input type="text" value=""></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label stacked[(ngModel)]="address()" >Addres :</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label stacked[(ngModel)]="application()">Name Of Application</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
 
-  <ion-list>
-
-    <ion-item>
-      <ion-label stacked>Full Name :</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Addres :</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Name Of Application</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label stacked>Deskripsi Application</ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
-
-  </ion-list>
-
-  <button ion-button color="primary" full round (click)="booking()">Booking</button>
+          <ion-item>
+            <ion-label stacked [(ngModel)]="description()">Deskripsi Application</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        
+        </ion-list>
+    
+        <button ion-button color="primary" round (click)="booking()">Save</button>
+    <!-- <button ion-button color="primary" round (click)="booking()" >booking</button> -->
 
 </ion-content>
