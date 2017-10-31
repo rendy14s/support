@@ -7,11 +7,11 @@
 <ion-header>
 
   <ion-navbar color="primary">
-  
-    <button ion-button menuToggle >
+
+    <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    
+
     <ion-title>Booking System</ion-title>
   </ion-navbar>
 
@@ -19,39 +19,31 @@
 
 
 <ion-content padding>
-  
-    <ion-list>
-        
-          <ion-item>
-            <ion-label fixed>Full Name :</ion-label>
-            <ion-input type="text" value=""></ion-input>
-          </ion-item>
-        
-          <ion-item>
-            <ion-label fixed>Addres :</ion-label>
-            <ion-input type="password"></ion-input>
-          </ion-item>
-        
-        </ion-list>
 
-    <ion-list>
-        
-          <ion-item>
-            <ion-label stacked>Name Of Application</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-        
-    </ion-list>
+  <ion-list>
 
-    <ion-list>
+    <ion-item>
+      <ion-label stacked>Full Name :</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
 
-        <ion-item>
-            <ion-label stacked>Deskripsi Application</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
+    <ion-item>
+      <ion-label stacked>Addres :</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
 
-    </ion-list>
+    <ion-item>
+      <ion-label stacked>Name Of Application</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
 
-    <button ion-button color="primary" round (click)="booking()" >booking</button>
+    <ion-item>
+      <ion-label stacked>Deskripsi Application</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color="primary" full round (click)="booking()">Booking</button>
 
 </ion-content>
