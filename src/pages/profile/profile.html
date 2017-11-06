@@ -6,46 +6,44 @@
 -->
 
 <ion-header>
-  
+
     <ion-navbar color="primary">
-  
-      <button ion-button menuToggle >
-          <ion-icon name="menu"></ion-icon>
-      </button>
-           <ion-title>About Us</ion-title>
-           
+
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>About Us</ion-title>
+
     </ion-navbar>
-  
+
 </ion-header>
-  
-  <ion-content>
-      <img src="assets/image/VMD.jpg" class="image-slide">
 
-      <ion-list>
-        
-          <ion-item>
+<ion-content>
+    <img src="assets/image/VMD.jpg" class="image-slide">
+
+    <ion-list >
+
+        <ion-item>
             <p class="example">Employee Of Team</p>
-            <h2 class="tester">VMD Indonesia</h2>
-            </ion-item>
-        
-            <ion-item text-wrap>
-                <p class="example">History Of Team</p>
-                <h2 class="tester">Awal mula team ini terbentuk ketika seorang mahasiswa esa unggul yang bernama aji tirta yang mempunyai keinginan</h2>
-                </ion-item>
+            <h2 class="tester">{{namakaryawan}}</h2>
+        </ion-item>
 
-            <ion-item>
-                <p class="example">Contact Person</p>
-                <h2 class="tester">VMDIndonesia@gmail.com</h2>
-                </ion-item>
+        <ion-item text-wrap>
+            <p class="example">History Of Team</p>
+            <h2 class="tester">{{histori}}</h2>
+        </ion-item>
 
-            <ion-item>
-                    <p class="example">Addres</p>
-                    <h2 class="tester">Bintaro Jaya X-Change</h2>
-                    </ion-item>
-        
-        </ion-list>
-        <button ion-button color="primary" round (click)="Edit()" >Edit</button> 
-        
-  </ion-content>
-  
+        <ion-item>
+            <p class="example">Contact Person</p>
+            <h2 class="tester">{{cp}}</h2>
+        </ion-item>
 
+        <ion-item>
+            <p class="example">Addres</p>
+            <h2 class="tester">{{alamat}}</h2>
+        </ion-item>
+
+    </ion-list>
+    <button ion-button color="primary" round full (click)="Edit()">Edit</button>
+
+</ion-content>

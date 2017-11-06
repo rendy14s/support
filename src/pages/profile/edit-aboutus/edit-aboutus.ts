@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VMDAboutUsApi } from './../../shared/sdk/services/custom/VMDAboutUs';
+import { VMDAboutUsApi } from './../../../shared/sdk/services/custom/VMDAboutUs';
 
 /**
  * Generated class for the EditAboutusPage page.
@@ -19,29 +19,31 @@ export class EditAboutusPage {
   public HistoriOfTeam: any;
   public ContactPerson: any;
   public Address: any;
-  
 
 
-  constructor(public navCtrl: NavController, 
+
+  constructor(
+    public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDEdit:VMDAboutUsApi) {
+    public VMDEdit: VMDAboutUsApi
+  ){
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditAboutusPage');
   }
+  
   public Save() {
     this.VMDEdit.create({
-          EmployeeOfTeam: this.EmployeeOfTeam,
-          HistoriOfTeam: this.HistoriOfTeam,
-          ContactPerson: this.ContactPerson,
-          Address: this.Address
+      nameTeam: this.EmployeeOfTeam,
+      historyTeam: this.HistoriOfTeam,
+      contactPerson: this.ContactPerson,
+      address: this.Address
+    }).subscribe((result) => {
+      console.log(result);
+      this.navCtrl.setRoot('ProfilePage');
     })
-        .subscribe((result) => {
-          console.log(result);
-          this.navCtrl.setRoot('ProfilePage');
-        })
-      }
-  
+  }
+
 
 }

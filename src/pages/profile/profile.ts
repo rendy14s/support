@@ -1,7 +1,6 @@
-
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-
+import { VMDAboutUsApi } from './../../shared/sdk/services/custom/VMDAboutUs';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -16,14 +15,31 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 })
 export class ProfilePage {
 
+  public dataCompany: any;
+  public id : any = '4';
+  public namakaryawan : any;
+  public histori : any;
+  public cp : any;
+  public alamat : any;
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public modalCtrl: ModalController,) {
+    public modalCtrl: ModalController,
+    public vmdAboutUsApi: VMDAboutUsApi
+  ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+    this.vmdAboutUsApi.findById (this.id).
+    subscribe((result) => {
+      console.log(result);
+      this.dataCompany = result;
+      this.namakaryawan = this.dataCompany.nameTeam ;
+      this.histori = this.dataCompany.historyTeam;
+      this.cp = this.dataCompany.contactPerson;
+      this.alamat = this.dataCompany.address;
+    })
   }
 
   presentModal() {

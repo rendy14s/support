@@ -5,7 +5,7 @@
   <ion-list>
 
       <ion-thumbnail id="bg">
-          <div class="foto-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}" menuClose></div>
+          <div class="foto-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}" menuClose (click)="onprofile()"></div>
 
           <p class="title-menu">VMD Indonesia</p>
           <p class="title-menu">Consultan IT</p>
