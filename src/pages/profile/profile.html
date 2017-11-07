@@ -21,11 +21,11 @@
 <ion-content>
     <img src="assets/image/VMD.jpg" class="image-slide">
 
-    <ion-list >
+    <ion-list *ngFor = "let datas of dataCompany"> 
 
         <ion-item>
             <p class="example">Employee Of Team</p>
-            <h2 class="tester">{{namakaryawan}}</h2>
+             <h2 class="tester">{{namakaryawan}}</h2>
         </ion-item>
 
         <ion-item text-wrap>

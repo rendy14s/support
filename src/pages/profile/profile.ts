@@ -53,5 +53,6 @@ export class ProfilePage {
   Edit() {
     this.navCtrl.push('EditAboutusPage');
   }
+  
  
 }

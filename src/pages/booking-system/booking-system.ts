@@ -15,13 +15,10 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'booking-system.html',
 })
 export class BookingSystemPage {
-  public fullname: any;
-  public address: any;
-  public application: any;
-  public description: any;
-  public id: any;
-  public userid: any;
-  public iduser: any;
+  public fullname1: any;
+  public address1: any;
+  public application1: any;
+  public description1: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -41,11 +38,10 @@ export class BookingSystemPage {
 
   booking() {
     this.VMDBooking.create({
-      idUser: this.userid.user.id,
-      fullname: this.fullname,
-      address: this.address,
-      application: this.application,
-      description: this.description,
+      fullname: this.fullname1,
+      address: this.address1,
+      application: this.application1,
+      description: this.description1
     }).subscribe((result) => {
       console.log(result);
     })
