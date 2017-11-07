@@ -1,5 +1,4 @@
 import { VMDMasteruserdataApi } from './../../shared/sdk/services/custom/VMDMasteruserdata';
-import { User } from './../../shared/sdk/models/User';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ViewController } from 'ionic-angular';
 import { VMDMasterEmmployeeCredentialApi } from './../../shared/sdk/services/custom/VMDMasterEmmployeeCredential';
