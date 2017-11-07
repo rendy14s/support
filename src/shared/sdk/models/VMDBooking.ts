@@ -3,6 +3,7 @@
 declare var Object: any;
 export interface VMDBookingInterface {
   "id"?: number;
+  "idUser"?: string;
   "fullname"?: string;
   "address"?: string;
   "nameApplication"?: string;
@@ -11,6 +12,7 @@ export interface VMDBookingInterface {
 
 export class VMDBooking implements VMDBookingInterface {
   "id": number;
+  "idUser": string;
   "fullname": string;
   "address": string;
   "nameApplication": string;
@@ -50,6 +52,10 @@ export class VMDBooking implements VMDBookingInterface {
         "id": {
           name: 'id',
           type: 'number'
+        },
+        "idUser": {
+          name: 'idUser',
+          type: 'string'
         },
         "fullname": {
           name: 'fullname',
