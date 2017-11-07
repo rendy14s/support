@@ -16,6 +16,11 @@ import { VMDAboutUsApi } from './../../shared/sdk/services/custom/VMDAboutUs';
 export class ProfilePage {
 
   public dataCompany: any;
+  public id : any = '4';
+  public namakaryawan : any;
+  public histori : any;
+  public cp : any;
+  public alamat : any;
 
   constructor(
     public navCtrl: NavController, 
@@ -26,9 +31,14 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
-    this.vmdAboutUsApi.find().subscribe((result) => {
+    this.vmdAboutUsApi.findById (this.id).
+    subscribe((result) => {
       console.log(result);
       this.dataCompany = result;
+      this.namakaryawan = this.dataCompany.nameTeam ;
+      this.histori = this.dataCompany.historyTeam;
+      this.cp = this.dataCompany.contactPerson;
+      this.alamat = this.dataCompany.address;
     })
   }
 

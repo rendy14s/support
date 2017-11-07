@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the BookingSystemPage page.
  *
@@ -18,23 +19,50 @@ export class BookingSystemPage {
   public address: any;
   public application: any;
   public description: any;
+  public id: any;
+  public userid: any;
+  public iduser: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDBooking: VMDBookingApi) {
+    public VMDBooking: VMDBookingApi,
+    public alertCtrl: AlertController,
+    public storage: Storage
+  ) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad bookingSystemPage');
+    this.storage.get('vmdStorage').then((result) => {
+      console.log(result);
+      this.userid = result;
+      this.iduser = this.userid.user.id;
+    })
   }
+
   booking() {
     this.VMDBooking.create({
+      idUser: this.userid.user.id,
       fullname: this.fullname,
       address: this.address,
       application: this.application,
-      description: this.description
+      description: this.description,
     }).subscribe((result) => {
       console.log(result);
     })
+    {
+      let alert = this.alertCtrl.create({
+        title: 'Berhasil',
+        subTitle: 'Data Anda Telah Tersimpan',
+        buttons: [
+          {
+            text: 'OK',
+            handler: () => {
+              this.navCtrl.setRoot('PageProfileOnBookingPage');
+            }
+          }
+        ]
+      });
+      alert.present();
+    }
   }
 }
