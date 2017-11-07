@@ -15,10 +15,14 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'booking-system.html',
 })
 export class BookingSystemPage {
+
+  public user1: any;
+  public iduser: any;
   public fullname1: any;
   public address1: any;
   public application1: any;
   public description1: any;
+  public thisid :any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -31,13 +35,14 @@ export class BookingSystemPage {
   ionViewDidLoad() {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
-      this.userid = result;
-      this.iduser = this.userid.user.id;
+      this.user1 = result;
+      this.iduser = this.user1.user.id;
     })
   }
 
   booking() {
     this.VMDBooking.create({
+      idUser : this.thisid,
       fullname: this.fullname1,
       address: this.address1,
       application: this.application1,

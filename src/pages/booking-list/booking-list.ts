@@ -44,17 +44,17 @@ export class BookingListPage {
     loader.present();
     
     this.storage.get('vmdStorage').then((result) => {
-      console.log(result, 'Result Storage');
+      console.log(result);
       this.userid = result;
-      this.iduser = this.userid.user.id;
-      console.log(this.iduser, 'ID User');
+      this.iduser = this.userid.idUser;
+      console.log(this.iduser);
       this.VMDBooking.find({
         where: {
           idUser: this.iduser
         }
       }).subscribe((result) => {
         loader.dismiss();
-        console.log(result, 'Result Booking');
+        console.log(result );
         this.viewdata = result;
       })
     })

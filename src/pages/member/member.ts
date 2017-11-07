@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { VMDMasterEmmployeeCredentialApi } from './../../shared/sdk/services/custom/VMDMasterEmmployeeCredential';
-
+import { VMDMasteruserdataApi } from './../../shared/sdk/services/custom/VMDMasteruserdata';
 /**
  * Generated class for the MemberPage page.
  *
@@ -24,11 +24,12 @@ export class MemberPage {
   public memberfullname: any;
   public memberemail: any;
   public id: any;
+  public viewmember: any;
 
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDUserMember: VMDMasterEmmployeeCredentialApi,
+    public VMDMasteruserdata: VMDMasteruserdataApi,
     public storage: Storage,
   ) {
   }
@@ -40,13 +41,13 @@ export class MemberPage {
       this.member2 = this.member.user.id
       console.log(this.member2);
       // this.VMDUserMember.find
-      this.VMDUserMember.find({
+      this.VMDMasteruserdata.find({
         where: {
           id: this.id
         }
       }).subscribe((result) => {
         console.log(result);
-        this.member = result;
+        this.viewmember = result;
 
       })
     });

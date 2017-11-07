@@ -54,6 +54,7 @@ export class RegistrationPage {
         statusPerkawinan: this.statusPerkawinan,
         tempatLahir: this.tempatLahir
       }).subscribe((result) => {
+        console.log('Sukses Register');
         let confirm = this.alertCtrl.create({
           message: 'Your Account Have Been Save!',
           buttons: [
