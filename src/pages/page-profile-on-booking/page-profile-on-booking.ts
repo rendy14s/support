@@ -23,8 +23,12 @@ export class PageProfileOnBookingPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public storage: Storage) {
+    
+   
   }
 
+ 
+  
   ionViewDidLoad() {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
@@ -36,4 +40,6 @@ export class PageProfileOnBookingPage {
   bookinglist() {
     this.navCtrl.push('BookingListPage');
   }
+
+ 
 }
