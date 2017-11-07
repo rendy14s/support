@@ -16,13 +16,16 @@
 
 <ion-content padding>
   <ion-list >
-      <ion-item >
-          <ion-avatar item-start>
-            <img src="assets/image/akis.jpg">
-          </ion-avatar>
-         <h2></h2>
-          <h2></h2>
-          <h2></h2>
-        </ion-item>
+    <ion-item *ngFor="let datas of viewmember">
+      <ion-avatar item-start>
+        <img style="width: 80px; height: 80px;" src="assets/image/VMD.jpg">
+      </ion-avatar>
+      <h2>{{datas.fullname}}</h2>
+      <p>{{datas.address}}</p>
+      <p>{{datas.no_telp}}</p>
+      <p>{{datas.statusPerkawinan}}</p>
+      <p>{{datas.tempatLahir}}</p>
+      <p>{{datas.tglLahir}}</p>
+    </ion-item>
   </ion-list>
 </ion-content>
