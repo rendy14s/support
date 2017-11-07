@@ -39,10 +39,10 @@ export class MyApp {
       { title: 'Dasboard', component: HomePage,  icons: 'home' },
       { title: 'About Us', component: 'ProfilePage', icons: 'md-help-circle' },
       { title: 'Team', component: 'TeamPage', icons: 'contacts' },
-      { title: 'Product', component: 'ProductPage', icons: 'md-cart' },
+      { title: 'Product', component: 'ProductPage', icons: 'md-document' },
       { title: 'Booking System', component: 'BookingSystemPage', icons: 'md-cart'},
+      { title: 'Member', component: 'MemberPage', icons: 'md-contact'}
 
-      
     ];
 
   }
