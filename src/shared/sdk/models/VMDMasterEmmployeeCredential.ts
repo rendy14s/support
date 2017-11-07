@@ -7,6 +7,7 @@ export interface VMDMasterEmmployeeCredentialInterface {
   "username"?: string;
   "email"?: string;
   "emailVerified"?: string;
+  "roleUser"?: string;
   "password"?: string;
   accessTokens?: any[];
 }
@@ -17,6 +18,7 @@ export class VMDMasterEmmployeeCredential implements VMDMasterEmmployeeCredentia
   "username": string;
   "email": string;
   "emailVerified": string;
+  "roleUser": string;
   "password": string;
   accessTokens: any[];
   constructor(data?: VMDMasterEmmployeeCredentialInterface) {
@@ -69,6 +71,10 @@ export class VMDMasterEmmployeeCredential implements VMDMasterEmmployeeCredentia
         },
         "emailVerified": {
           name: 'emailVerified',
+          type: 'string'
+        },
+        "roleUser": {
+          name: 'roleUser',
           type: 'string'
         },
         "password": {
