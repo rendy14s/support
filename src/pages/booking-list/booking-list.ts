@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
 import { Storage } from '@ionic/storage';
+import { LoadingController } from 'ionic-angular';
+
 /**
  * Generated class for the BookingListPage page.
  *
@@ -29,11 +31,18 @@ export class BookingListPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public VMDBooking: VMDBookingApi,
-    public storage: Storage
+    public storage: Storage,
+    public loadingCtrl: LoadingController
   ) {
+    
   }
 
   ionViewDidLoad() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait..."
+    });
+    loader.present();
+    
     this.storage.get('vmdStorage').then((result) => {
       console.log(result, 'Result Storage');
       this.userid = result;
@@ -44,6 +53,7 @@ export class BookingListPage {
           idUser: this.iduser
         }
       }).subscribe((result) => {
+        loader.dismiss();
         console.log(result, 'Result Booking');
         this.viewdata = result;
       })
