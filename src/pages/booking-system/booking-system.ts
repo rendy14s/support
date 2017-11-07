@@ -15,6 +15,8 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'booking-system.html',
 })
 export class BookingSystemPage {
+  public iduser: any;
+  public userid: any;
   public fullname1: any;
   public address1: any;
   public application1: any;
